@@ -22,6 +22,7 @@ class ChannelListViewModel @Inject constructor(
     private val _channelListValue = MutableStateFlow(ChannelListState())
     var channelListState: StateFlow<ChannelListState> = _channelListValue
 
+    /** This function is used to get the channel list */
     fun getAllChannelList() = viewModelScope.launch(Dispatchers.IO) {
         channelListUseCase().collect {
             when (it) {
