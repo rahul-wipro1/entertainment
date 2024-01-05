@@ -1,6 +1,6 @@
-package com.task.data.dto
+package com.task.core.data.dto
 
-import com.task.domain.model.ChannelList
+import com.task.core.domain.model.ChannelList
 
 data class ChannelsDTOItem(
     val date: String? = "",

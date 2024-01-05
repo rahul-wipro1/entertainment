@@ -1,6 +1,6 @@
 package com.task.presentation.viewmodel
 
-import com.task.domain.model.ChannelList
+import com.task.core.domain.model.ChannelList
 
 /** This data class is used to handle the isLoading
  * and channelList and error message in viewModel

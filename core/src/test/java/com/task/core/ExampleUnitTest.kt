@@ -1,4 +1,4 @@
-package com.task
+package com.task.core
 
 import org.junit.Test
 

@@ -6,15 +6,18 @@ plugins {
 }
 
 android {
-    namespace 'com.task'
-    compileSdk 33
+    namespace 'com.task.core'
+    compileSdk 34
 
     defaultConfig {
         minSdk 26
-        targetSdk 33
+        targetSdk 34
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
+    }
+    dataBinding {
+        enabled true
     }
 
     buildTypes {
@@ -31,21 +34,20 @@ android {
         jvmTarget = '1.8'
     }
 }
-
 def hilt_version = "2.44"
 def coroutine_version = "1.3.9"
 def retrofit_version = "2.9.0"
 def life_cycle = "2.6.1"
-
+def lifecycle_version = "2.6.2"
+def navigation_version = "2.5.3"
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.8.0'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.core:core-ktx:1.6.0'
+    implementation 'androidx.appcompat:appcompat:1.3.0'
     implementation 'com.google.android.material:material:1.11.0'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-
     //Hilt dependency
     implementation "com.google.dagger:hilt-android:$hilt_version"
     kapt "com.google.dagger:hilt-compiler:$hilt_version"
@@ -54,15 +56,8 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutine_version"
 
     //Retrofit Dependency
-    implementation "com.squareup.retrofit2:$retrofit_version"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
-
-    //life cycle Dependency
-    implementation "androidx.lifecycle:lifecycle-runtime:$life_cycle"
-    implementation "androidx.lifecycle:lifecycle-common-java8$life_cycle"
-    kapt "androidx.lifecycle:lifecycle-compiler:$life_cycle"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$life_cycle"
-    implementation "androidx.lifecycle:lifecycle-livedata-ktx$life_cycle"
 }
 kapt {
     correctErrorTypes true

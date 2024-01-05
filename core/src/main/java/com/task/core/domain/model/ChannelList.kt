@@ -1,4 +1,4 @@
-package com.task.domain.model
+package com.task.core.domain.model
 
 data class ChannelList(
     val date: String? = "",

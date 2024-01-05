@@ -1,8 +1,8 @@
-package com.task.domain.use_cases
+package com.task.core.domain.use_cases
 
-import com.task.domain.model.ChannelList
-import com.task.domain.repository.ChannelRepository
-import com.task.util.ResponseState
+import com.task.core.domain.model.ChannelList
+import com.task.core.domain.repository.ChannelRepository
+import com.task.core.util.ResponseState
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import retrofit2.HttpException

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navgraph"
+    app:startDestination="@id/channelListFragment">
+
+    <fragment
+        android:id="@+id/channelListFragment"
+        android:name="com.task.presentation.view.ChannelListFragment"
+        android:label="ChannelListFragment"
+        tools:layout="@layout/fragment_channel_list">
+        <action
+            android:id="@+id/action_channelListFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.task.presentation.view.DetailsFragment"
+        android:label="DetailsFragment"
+        tools:layout="@layout/fragment_details"/>
+</navigation>

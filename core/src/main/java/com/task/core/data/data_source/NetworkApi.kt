@@ -1,6 +1,6 @@
-package com.task.data.data_source
+package com.task.core.data.data_source
 
-import com.task.data.dto.ChannelsListDTO
+import com.task.core.data.dto.ChannelsListDTO
 import retrofit2.http.GET
 
 interface NetworkApi {

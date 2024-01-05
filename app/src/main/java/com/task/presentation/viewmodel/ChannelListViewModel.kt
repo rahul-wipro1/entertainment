@@ -2,8 +2,8 @@ package com.task.presentation.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.task.domain.use_cases.ChannelListUseCase
-import com.task.util.ResponseState
+import com.task.core.domain.use_cases.ChannelListUseCase
+import com.task.core.util.ResponseState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow

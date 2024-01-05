@@ -1,4 +1,4 @@
-package com.task.util
+package com.task.core.util
 
 sealed class ResponseState<T>(val data: T? = null, val message: String? = null) {
     class Loading<T>(data: T? = null) : ResponseState<T>(data)
