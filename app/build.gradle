@@ -42,6 +42,7 @@ def retrofit_version = "2.9.0"
 def lifecycle_version = "2.6.2"
 def navigation_version = "2.5.3"
 def picasso_version = "2.71828"
+def mockkVersion = "1.13.9"
 
 dependencies {
     implementation project(path: ':core')
@@ -77,10 +78,15 @@ dependencies {
     implementation "androidx.navigation:navigation-fragment-ktx:$navigation_version"
     implementation "androidx.navigation:navigation-ui:$navigation_version"
     implementation "androidx.navigation:navigation-ui-ktx:$navigation_version"
-//    implementation "androidx.navigation:navigation-safe-args-gradle-plugin:$navigation_version"
 
     //Picasso image library
     implementation "com.squareup.picasso:picasso:$picasso_version"
+
+    //MockK Testing Dependency
+    testImplementation "io.mockk:mockk-android:$mockkVersion"
+    testImplementation "io.mockk:mockk-agent:$mockkVersion"
+    androidTestImplementation "io.mockk:mockk-android:$mockkVersion"
+    androidTestImplementation "io.mockk:mockk-agent:$mockkVersion"
 
 }
 kapt {
