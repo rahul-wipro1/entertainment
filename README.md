@@ -16,7 +16,11 @@ App module consists of presentation layer like Activity, fragment and ViewModel.
 ### core module 
 Core module consists of data layer, domain layer and uicomponent.
 
-## Images and app screenshot will be uploaded shortly........ :crossed_fingers:
+## Images
+
+<img width="425" alt="mobileScreenShot" src="https://github.com/rahul-wipro1/entertainment/assets/125335627/a8615fe0-8df5-4998-a212-0d79645189a5">
+
+# Thank You
 
 
 
