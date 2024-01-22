@@ -8,6 +8,7 @@ import kotlinx.coroutines.flow.flow
 import retrofit2.HttpException
 import java.io.IOException
 import javax.inject.Inject
+import com.task.core.util.Constant.ERROR_OCCURRED
 
 class ChannelListUseCase @Inject constructor(
     private val channelRepository: ChannelRepository,
@@ -20,9 +21,9 @@ class ChannelListUseCase @Inject constructor(
             }
             emit(ResponseState.Success<List<ChannelList>>(channel))
         } catch (e: HttpException) {
-            emit(ResponseState.Error<List<ChannelList>>(e.localizedMessage ?: "Error Occurred"))
+            emit(ResponseState.Error<List<ChannelList>>(e.localizedMessage ?: ERROR_OCCURRED))
         } catch (e: IOException) {
-            emit(ResponseState.Error<List<ChannelList>>("Error Occurred"))
+            emit(ResponseState.Error<List<ChannelList>>(ERROR_OCCURRED))
         }
     }
 }

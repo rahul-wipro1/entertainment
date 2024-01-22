@@ -10,6 +10,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
+import com.task.core.util.Constant.UNEXPECTED_ERROR
 
 /** This ChannelList View model is used to fetch
  * the data from the ChannelListUseCase
@@ -36,7 +37,7 @@ class ChannelListViewModel @Inject constructor(
 
                 is ResponseState.Error -> {
                     _channelListValue.value =
-                        ChannelListState(error = it.message ?: "Unexpected Error")
+                        ChannelListState(error = it.message ?: UNEXPECTED_ERROR)
                 }
             }
         }
