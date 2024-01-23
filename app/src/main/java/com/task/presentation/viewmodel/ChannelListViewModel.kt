@@ -30,11 +30,9 @@ class ChannelListViewModel @Inject constructor(
                 is ResponseState.Loading -> {
                     _channelListValue.value = ChannelListState(isLoading = true)
                 }
-
                 is ResponseState.Success -> {
                     _channelListValue.value = ChannelListState(channelList = it.data ?: emptyList())
                 }
-
                 is ResponseState.Error -> {
                     _channelListValue.value =
                         ChannelListState(error = it.message ?: UNEXPECTED_ERROR)
